@@ -179,9 +179,11 @@
             console.log(returnData.query);
             var totalResults = returnData.query.count;
             var results = returnData.query.results;
-            for (var i = totalResults; i > 0; i--){
+            console.log(totalResults);
+            for (var i = totalResults-1; i > -1; i--){
                 console.log(results.quote[i].Close);
-                
+//                console.log(results.quote[i].toString);
+//                
                 chartData.push(results.quote[i].Close);
                 labelData.push(results.quote[i].Date);
             }
